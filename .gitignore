@@ -1,0 +1,14 @@
+node_modules/
+dist/
+.env
+*.log
+playwright-report/
+
+website-dist/
+kisc-peoplehub-website.zip
+kisc-peoplehub-share.zip
+kisc-peoplehub-render-source.zip
+
+/KISC-PeopleHub*.html
+
+hr-dist/

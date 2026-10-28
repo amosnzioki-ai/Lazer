@@ -1,0 +1,18 @@
+services:
+  db:
+    image: postgres:17-alpine
+    container_name: peoplehub-db
+    environment:
+      POSTGRES_USER: peoplehub
+      POSTGRES_DB: peoplehub
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Set POSTGRES_PASSWORD in your shell}
+    ports:
+      - "127.0.0.1:5432:5432"
+    volumes:
+      - peoplehub_db:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U peoplehub"]
+      interval: 5s
+      retries: 10
+volumes:
+  peoplehub_db:

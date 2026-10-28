@@ -1,0 +1,24 @@
+KISC PEOPLEHUB — PROJECT OVERVIEW
+One team. Seven schools. One connected workforce.
+
+A proposed staff-only Human Resource Management System for Kitengela International Schools, with centralized KISC head office support and authorized aggregate Enko Education oversight.
+
+WHO IT IS FOR
+Employees, teachers, school leaders, managers, HR, finance and recruitment teams. Seven proposed school sections across Kitengela, Athi River and Syokimau campuses. Final organizational names and assignments require KISC confirmation.
+
+DEVELOPMENT CAPABILITIES
+Employee directory and profile creation; basic leave requests and decisions; school-scoped permissions; HR task registers; workforce reporting; activity audit records.
+
+PLANNED CAPABILITIES
+Complete employee lifecycle, attendance and shifts, recruitment, structured training and qualification tracking, versioned Kenyan payroll rules, documents and signatures, advanced approvals, MFA, secure integrations, backups and verified production security.
+
+SCOPE
+Staff and HR only. No students, parents, admissions, fees, grades or learner records.
+
+STATUS
+This is an independent development concept, not an official or commissioned KISC product. All sample people and HR records are fictional. The application is not production-ready and must not hold real employee data. Payroll processing is not enabled.
+
+The public website can run as a static site. The application separately requires its API, PostgreSQL and further production security work. A live public URL requires website hosting; no hosting service is automatically provisioned by the source code.
+
+HEALTH AND STAFF COLLABORATION UPDATE
+The development HR app includes a separately encrypted health-profile store with central-HR/employee access, plus private reports/minutes drafts and reviewed publication to authorized KISC staff. Meeting schedules, action tracking, decisions, notices and versioned policy acknowledgements are included. No actual medical data may be entered in the downloadable HTML demonstration; local demo storage is not medical-grade or authenticated storage. Production MFA, privacy, retention, backup/key-recovery and security verification remain outstanding.

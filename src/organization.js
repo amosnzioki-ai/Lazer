@@ -1,0 +1,131 @@
+export const staffCategories = ["Teaching", "Support", "Leadership"];
+export const categoryLabel = (category) =>
+  ({
+    Teaching: "Teaching staff",
+    Support: "Support staff",
+    Leadership: "Leadership",
+  })[category] || "Unassigned";
+export const isHeadOffice = (e) => e.org_scope === "Head office";
+export const placementValue = (e) =>
+  isHeadOffice(e) ? "head-office" : String(e.school_id);
+export const organizationSeeds = [
+  {
+    key: "HO-01",
+    name: "Catherine Nduta",
+    title: "KISC Executive Director",
+    department: "Executive Leadership",
+    org_scope: "Head office",
+    staff_category: "Leadership",
+    school_id: null,
+  },
+  {
+    key: "HO-02",
+    name: "Martin Wekesa",
+    title: "Group Academic Director",
+    department: "Academic Strategy",
+    org_scope: "Head office",
+    staff_category: "Leadership",
+    school_id: null,
+  },
+  {
+    key: "HO-03",
+    name: "Beatrice Naliaka",
+    title: "Head of People & Culture",
+    department: "Human Resources",
+    org_scope: "Head office",
+    staff_category: "Leadership",
+    school_id: null,
+  },
+  {
+    key: "HO-04",
+    name: "George Mutisya",
+    title: "Finance & Operations Director",
+    department: "Finance",
+    org_scope: "Head office",
+    staff_category: "Leadership",
+    school_id: null,
+  },
+  {
+    key: "HO-05",
+    name: "Agnes Wanjiru",
+    title: "Central HR Coordinator",
+    department: "Human Resources",
+    org_scope: "Head office",
+    staff_category: "Support",
+    school_id: null,
+  },
+  {
+    key: "HO-06",
+    name: "Dennis Karanja",
+    title: "Group ICT Coordinator",
+    department: "ICT Services",
+    org_scope: "Head office",
+    staff_category: "Support",
+    school_id: null,
+  },
+  ...Array.from({ length: 7 }, (_, i) =>
+    [
+      {
+        key: "S" + (i + 1) + "-LEAD",
+        name: [
+          "Pauline Mugo",
+          "Robert Makori",
+          "Janet Kirui",
+          "Elizabeth Muthama",
+          "Anthony Omondi",
+          "Diana Wanjala",
+          "Simon Njoroge",
+        ][i],
+        title: "Head of School",
+        department: "School Leadership",
+        staff_category: "Leadership",
+      },
+      {
+        key: "S" + (i + 1) + "-TEACH",
+        name: [
+          "Irene Mwende",
+          "Felix Barasa",
+          "Nancy Wambui",
+          "Caroline Kendi",
+          "Patrick Rotich",
+          "Sylvia Akinyi",
+          "Michael Nyaga",
+        ][i],
+        title: "Classroom Teacher",
+        department: "Academics",
+        staff_category: "Teaching",
+      },
+      {
+        key: "S" + (i + 1) + "-SUPPORT",
+        name: [
+          "Francis Muli",
+          "Hellen Auma",
+          "Victor Maina",
+          "Brenda Jepkoech",
+          "Richard Nderitu",
+          "Susan Ndunge",
+          "Elijah Cheruiyot",
+        ][i],
+        title: [
+          "School Administrator",
+          "School Nurse",
+          "ICT Technician",
+          "Boarding Coordinator",
+          "Transport Coordinator",
+          "Receptionist",
+          "Facilities Coordinator",
+        ][i],
+        department: [
+          "Administration",
+          "Staff Welfare",
+          "ICT Services",
+          "Boarding Operations",
+          "Transport",
+          "Administration",
+          "Facilities",
+        ][i],
+        staff_category: "Support",
+      },
+    ].map((e) => ({ ...e, org_scope: "School", school_id: i + 1 })),
+  ).flat(),
+];
